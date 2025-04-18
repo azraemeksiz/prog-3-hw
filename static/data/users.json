@@ -1,2 +1,15 @@
 [
-]
+    {
+      "id": 1,
+      "name": "azraemeksiz",
+      "passwordHash": "$2b$12$AEj..shtk0CPkO7Qx3cH9.nxv.3.3JM4zvOmDj7b5twRqj1PO0cIy",
+      "budget": 100,
+      "inventory": {
+        "food": 1,
+        "toy": 1,
+        "treat": 0
+      },
+      "role": "user"
+    }
+  ]
+  
