@@ -1,5 +1,7 @@
+
+
 export interface Pet {
-	name: string
+	name: string;
 }
 
 export interface User {
@@ -9,3 +11,16 @@ export interface User {
 }
 
 export type SafeUser = Omit<User, 'passwordHash'>;
+
+//extending users so they can have other attributes
+export interface FullUser extends User {
+	budget: number;
+	inventory: {
+		food: number;
+		toy: number;
+		treat: number;
+	};
+	role: string;
+}
+
+export type SafeFullUser = Omit<FullUser, 'passwordHash'>;
