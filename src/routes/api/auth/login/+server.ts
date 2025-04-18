@@ -32,6 +32,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		budget: user.budget,
 		inventory: user.inventory,
 		role: user.role
+	
 	}; //creates a safe version of the user without password
 
 	return new Response(JSON.stringify(safeUser), { status: 200 }); //turn into string then send
