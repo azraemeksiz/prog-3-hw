@@ -1,10 +1,14 @@
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { Pet } from '$lib/types';
+	import { currentUser } from '$lib/stores';
 
 	
 	let pets: Pet[] = [];
 	let petType: '' | 'puppy' | 'kitten' = '';
+
+	$: user = $currentUser;
 
 	async function loadPets() {
 		const res = await fetch(`/api/pets${petType ? `?type=${petType}` : ''}`);
@@ -12,10 +16,16 @@
 	}
 
 	async function adopt(petId: number) {
-        // TODO only let the user adopt if they are signed in.
+		if (!user) {
+			alert('You must be logged in to adopt a pet.');
+			return;
+		}
+
+		console.log(`User ${user.name} is adopting pet with ID ${petId}`); //I only let the signed in user adopt a pet
 	}
 
 	onMount(loadPets);
+	
 </script>
 
 <h1>Browse Adoptable Pets</h1>
