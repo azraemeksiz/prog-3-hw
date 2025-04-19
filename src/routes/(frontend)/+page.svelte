@@ -8,24 +8,37 @@
 	let pets: Pet[] = [];
 	let petType: '' | 'puppy' | 'kitten' = '';
 
-	$: user = $currentUser;
+	$: user = $currentUser; //follow the user
 
 	async function loadPets() {
 		const res = await fetch(`/api/pets${petType ? `?type=${petType}` : ''}`);
 		pets = await res.json();
-	}
+	} //update the pet list
 
 	async function adopt(petId: number) {
 		if (!user) {
 			alert('You must be logged in to adopt a pet.');
 			return;
-		}
+		} 
 
-		console.log(`User ${user.name} is adopting pet with ID ${petId}`); //I only let the signed in user adopt a pet
+			const res = await fetch('/api/adopt', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ userId: user.id, petId })
+		});
+
+		if (res.ok) {
+			alert('Pet successfully adopted!');
+			await loadPets(); //update pet list
+		} else {
+			alert('Failed to adopt pet.');
+		}
 	}
 
-	onMount(loadPets);
 	
+		
+	onMount(loadPets);
+
 </script>
 
 <h1>Browse Adoptable Pets</h1>

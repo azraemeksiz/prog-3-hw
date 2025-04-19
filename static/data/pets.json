@@ -3,18 +3,18 @@
     "id": 1,
     "name": "Max",
     "type": "puppy",
-    "hunger": 50,
+    "hunger": 0,
     "happiness": 50,
-    "adopted": false,
-    "ownerId": null
+    "adopted": true,
+    "ownerId": 3
   },
   {
     "id": 2,
     "name": "BettyBop",
     "type": "kitten",
-    "hunger": 50,
+    "hunger": 30,
     "happiness": 50,
-    "adopted": false,
-    "ownerId": null
+    "adopted": true,
+    "ownerId": 3
   }
 ]

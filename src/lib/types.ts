@@ -5,7 +5,7 @@ export interface Pet {
 	happiness: number;
 	type: string;       
 	adopted: boolean;
-	ownerId: number;   //added more functionalities to pets such as hunger type etc
+	ownerId: number | null;   //added more functionalities to pets such as hunger type etc
 }
 
 export interface User {

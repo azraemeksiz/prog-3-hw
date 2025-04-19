@@ -9,7 +9,7 @@ const petsPath = path.resolve('static/data/pets.json');
 const logPath = path.resolve('static/data/log.json');
 
 export const POST: RequestHandler = async ({ request }) => {
-	const { userId, petId } = await request.json();
+	const { userId, petId, action } = await request.json();
 
 	const [userFile, petFile, logFile] = await Promise.all([
 		readFile(usersPath, 'utf-8'),
@@ -28,23 +28,42 @@ export const POST: RequestHandler = async ({ request }) => {
 		return new Response(JSON.stringify({ message: 'User or Pet not found' }), { status: 404 });
 	}
 
-	
-	if (user.inventory.food > 0) {
-		user.inventory.food -= 1;
-	} else if (user.budget >= 5) {
-		user.budget -= 5;
-	} else {
-		
-		return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
+	switch (action) {
+		case 'feed':
+			if (user.inventory.food > 0) {
+				user.inventory.food -= 1;
+			} else if (user.budget >= 5) {
+				user.budget -= 5;
+			} else {
+				return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
+			}
+			pet.hunger = Math.max(0, pet.hunger - 20);
+			logs.push(`${user.name} fed ${pet.name} (-$5)`);
+			break;
+
+		case 'toy':
+			if (user.inventory.toy > 0) {
+				user.inventory.toy -= 1;
+			} else if (user.budget >= 10) {
+				user.budget -= 10;
+			} else {
+				return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
+			}
+			pet.happiness = Math.min(100, pet.happiness + 30);
+			logs.push(`${user.name} played with ${pet.name} (-$10)`);
+			break;
+
+		case 'return':
+			pet.adopted = false;
+			pet.ownerId = null;
+			user.budget -= 20;
+			logs.push(`${user.name} returned ${pet.name} (-$20)`);
+			break;
+
+		default:
+			return new Response(JSON.stringify({ message: 'Invalid action' }), { status: 400 });
 	}
 
-	//reduce hunger
-	pet.hunger = Math.max(0, pet.hunger - 20);
-
-	//add log
-	logs.push(`${user.name} fed ${pet.name} (-$5)`);
-
-	//updated information to files
 	await Promise.all([
 		writeFile(usersPath, JSON.stringify(users, null, 2)),
 		writeFile(petsPath, JSON.stringify(pets, null, 2)),
