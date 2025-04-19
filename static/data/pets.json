@@ -13,7 +13,7 @@
     "name": "BettyBop",
     "type": "kitten",
     "hunger": 30,
-    "happiness": 50,
+    "happiness": 80,
     "adopted": true,
     "ownerId": 3
   }
