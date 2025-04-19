@@ -34,5 +34,17 @@
       "treat": 0
     },
     "role": "admin"
+  },
+  {
+    "id": 4,
+    "name": "aaa",
+    "passwordHash": "$2b$12$9qO46LJmjOIMdpSXO0z2QO2x1IgFouGbbVKMpap/Lbb0qTyCdwueO",
+    "budget": 100,
+    "inventory": {
+      "food": 1,
+      "toy": 1,
+      "treat": 0
+    },
+    "role": "user"
   }
 ]

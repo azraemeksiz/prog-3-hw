@@ -12,10 +12,15 @@
   
 	async function loadPets() {
 	  
-		pets = [
-	{ id: 1, name: 'Leon', type: 'puppy', hunger: 50, happiness: 70, adopted: true, ownerId: 1 },
-	{ id: 2, name: 'Mat', type: 'kitten', hunger: 30, happiness: 80, adopted: true, ownerId: 1 }
-];
+		try {
+    const res = await fetch('/api/pets'); //Now it is taking the data from the JSON file 
+    if (!res.ok) throw new Error('Failed to load pets');
+
+    const allPets: Pet[] = await res.json();
+    pets = allPets.filter((p) => p.adopted && p.ownerId === user?.id); //this part checks the owner 
+  } catch (err) {
+    error = 'Error loading pets.';
+  }
 
 	}
   
