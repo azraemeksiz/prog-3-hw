@@ -8,6 +8,9 @@
   let error = '';
 
   async function handleLogin() {
+    
+    console.log("Trying login with", name, password); //added later for check
+
     const res = await fetch('/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

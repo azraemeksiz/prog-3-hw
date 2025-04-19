@@ -20,6 +20,11 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	const passwordMatch = await bcrypt.compare(password, user.passwordHash); //compares password with hashed password
+
+	console.log("Found user:", user); //added later for check
+    console.log("Password match:", passwordMatch);
+
+
 	if (!passwordMatch) {
 		return new Response(JSON.stringify({ message: 'Invalid password' }), {
 			status: 401

@@ -22,5 +22,17 @@
       "treat": 0
     },
     "role": "user"
+  },
+  {
+    "id": 3,
+    "name": "adminazra",
+    "passwordHash": "$2b$12$/76Io5UjaszMAYEnwon1z.zRayyJPY5BMfWUzWCG9sOq.SGTugeN.",
+    "budget": 100,
+    "inventory": {
+      "food": 1,
+      "toy": 1,
+      "treat": 0
+    },
+    "role": "admin"
   }
 ]

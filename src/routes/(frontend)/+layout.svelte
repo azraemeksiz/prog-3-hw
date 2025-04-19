@@ -16,7 +16,13 @@
         <a href="/dashboard">Dashboard</a>
         <a href="/logs">Logs</a>
         <a href="/shop">Shop</a>
+
 <!--        if the user is an administrator add a button here that redirects the user to /admin-->
+           {#if user.role === 'admin'} 
+           <button on:click={() => goto('/admin')}>Admin</button>
+           {/if}
+
+
         <button on:click={logout}>Logout</button>
         <span class="user">{user.name}</span>
     {:else}

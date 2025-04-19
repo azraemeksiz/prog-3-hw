@@ -14,7 +14,7 @@
 	  
 		pets = [
 	{ id: 1, name: 'Leon', type: 'puppy', hunger: 50, happiness: 70, adopted: true, ownerId: 1 },
-	{ id: 2, name: 'Mathilda', type: 'kitten', hunger: 30, happiness: 80, adopted: true, ownerId: 1 }
+	{ id: 2, name: 'Mat', type: 'kitten', hunger: 30, happiness: 80, adopted: true, ownerId: 1 }
 ];
 
 	}
