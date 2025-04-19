@@ -6,7 +6,7 @@
     "hunger": 50,
     "happiness": 50,
     "adopted": false,
-    "ownerId": -50
+    "ownerId": null
   },
   {
     "id": 2,
@@ -15,6 +15,6 @@
     "hunger": 50,
     "happiness": 50,
     "adopted": false,
-    "ownerId": -50
+    "ownerId": null
   }
 ]
