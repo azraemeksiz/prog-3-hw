@@ -27,11 +27,11 @@
     "id": 3,
     "name": "adminazra",
     "passwordHash": "$2b$12$/76Io5UjaszMAYEnwon1z.zRayyJPY5BMfWUzWCG9sOq.SGTugeN.",
-    "budget": 200,
+    "budget": -60,
     "inventory": {
       "food": 0,
-      "toy": 2,
-      "treat": 3
+      "toy": 4,
+      "treat": 7
     },
     "role": "admin"
   },

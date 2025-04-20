@@ -47,6 +47,8 @@
       return;
     }
 
+    currentUser.set(result); //added this because i want the results of hunger and happiness to show up right after feeding or playing 
+
     const pet = pets.find(p => p.id === petId);
     if (!pet) return;
 
@@ -60,6 +62,9 @@
       pets = pets.filter(p => p.id !== petId);
       success = `${pet.name} has been returned.`;
     }
+
+    await loadPets(); //refresh the pet list from the server so it shows values right after feeding 
+
   } catch (err) {
     error = 'Failed to perform action.';
   }

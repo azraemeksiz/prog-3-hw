@@ -4,7 +4,7 @@
     "name": "Max",
     "type": "puppy",
     "hunger": 0,
-    "happiness": 100,
+    "happiness": 0,
     "adopted": false,
     "ownerId": null
   },
@@ -34,5 +34,14 @@
     "happiness": 90,
     "adopted": true,
     "ownerId": 4
+  },
+  {
+    "id": 5,
+    "name": "Feather",
+    "type": "kitten",
+    "hunger": 0,
+    "happiness": 100,
+    "adopted": false,
+    "ownerId": null
   }
 ]

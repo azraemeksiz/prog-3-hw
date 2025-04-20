@@ -70,5 +70,5 @@ export const POST: RequestHandler = async ({ request }) => {
 		writeFile(logPath, JSON.stringify(logs, null, 2))
 	]);
 
-	return new Response(JSON.stringify({ success: true }), { status: 200 });
+	return new Response(JSON.stringify(user), { status: 200 });
 };
