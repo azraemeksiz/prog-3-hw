@@ -27,7 +27,7 @@
     "id": 3,
     "name": "adminazra",
     "passwordHash": "$2b$12$/76Io5UjaszMAYEnwon1z.zRayyJPY5BMfWUzWCG9sOq.SGTugeN.",
-    "budget": -65,
+    "budget": -105,
     "inventory": {
       "food": 0,
       "toy": 0,
