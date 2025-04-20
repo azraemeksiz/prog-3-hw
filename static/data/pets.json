@@ -5,15 +5,15 @@
     "type": "puppy",
     "hunger": 0,
     "happiness": 100,
-    "adopted": true,
-    "ownerId": 3
+    "adopted": false,
+    "ownerId": null
   },
   {
     "id": 2,
     "name": "BettyBop",
     "type": "kitten",
-    "hunger": 30,
-    "happiness": 80,
+    "hunger": 0,
+    "happiness": 100,
     "adopted": true,
     "ownerId": 4
   },
@@ -21,18 +21,18 @@
     "id": 3,
     "name": "Daisy",
     "type": "kitten",
-    "hunger": 10,
-    "happiness": 90,
-    "adopted": true,
-    "ownerId": 3
+    "hunger": 0,
+    "happiness": 100,
+    "adopted": false,
+    "ownerId": null
   },
   {
     "id": 4,
     "name": "Cadillac",
     "type": "puppy",
     "hunger": 50,
-    "happiness": 60,
-    "adopted": false,
-    "ownerId": -50
+    "happiness": 90,
+    "adopted": true,
+    "ownerId": 4
   }
 ]
