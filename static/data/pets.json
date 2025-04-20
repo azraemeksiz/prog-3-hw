@@ -4,7 +4,7 @@
     "name": "Max",
     "type": "puppy",
     "hunger": 0,
-    "happiness": 50,
+    "happiness": 100,
     "adopted": true,
     "ownerId": 3
   },
@@ -16,5 +16,23 @@
     "happiness": 80,
     "adopted": true,
     "ownerId": 4
+  },
+  {
+    "id": 3,
+    "name": "Daisy",
+    "type": "kitten",
+    "hunger": 10,
+    "happiness": 90,
+    "adopted": true,
+    "ownerId": 3
+  },
+  {
+    "id": 4,
+    "name": "Cadillac",
+    "type": "puppy",
+    "hunger": 50,
+    "happiness": 60,
+    "adopted": false,
+    "ownerId": -50
   }
 ]

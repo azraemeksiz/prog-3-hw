@@ -17,9 +17,10 @@
 		});
 
 		if (res.ok) {
-			alert(`You bought one ${item}!`);
-			await invalidate('currentUser'); //It was reloading the whole page and logged us out so I used this instead of location reload
-		} else {
+		const updatedUser = await res.json();
+		currentUser.set(updatedUser); 
+		alert(`You bought one ${item}!`);
+	} else {
 			alert('Purchase failed.');
 		}
 		
