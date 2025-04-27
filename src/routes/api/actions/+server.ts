@@ -3,7 +3,6 @@ import path from 'path';
 import { readFile, writeFile } from 'fs/promises';
 import type { FullUser, Pet } from '$lib/types';
 
-
 const usersPath = path.resolve('static/data/users.json');
 const petsPath = path.resolve('static/data/pets.json');
 const logPath = path.resolve('static/data/log.json');
@@ -32,25 +31,21 @@ export const POST: RequestHandler = async ({ request }) => {
 		case 'feed':
 			if (user.inventory.food > 0) {
 				user.inventory.food -= 1;
-			} else if (user.budget >= 5) {
-				user.budget -= 5;
 			} else {
 				return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
 			}
 			pet.hunger = Math.max(0, pet.hunger - 20);
-			logs.push(`${user.name} fed ${pet.name} (-$5)`);
+			logs.push(`${user.name} fed ${pet.name}`);
 			break;
 
 		case 'toy':
 			if (user.inventory.toy > 0) {
 				user.inventory.toy -= 1;
-			} else if (user.budget >= 10) {
-				user.budget -= 10;
 			} else {
 				return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
 			}
 			pet.happiness = Math.min(100, pet.happiness + 30);
-			logs.push(`${user.name} played with ${pet.name} (-$10)`);
+			logs.push(`${user.name} played with ${pet.name}`);
 			break;
 
 		case 'return':

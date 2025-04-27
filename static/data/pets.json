@@ -4,7 +4,7 @@
     "name": "Max",
     "type": "puppy",
     "hunger": 0,
-    "happiness": 0,
+    "happiness": 100,
     "adopted": false,
     "ownerId": null
   },
@@ -12,17 +12,17 @@
     "id": 2,
     "name": "BettyBop",
     "type": "kitten",
-    "hunger": 0,
-    "happiness": 100,
-    "adopted": true,
-    "ownerId": 4
+    "hunger": 100,
+    "happiness": 0,
+    "adopted": false,
+    "ownerId": null
   },
   {
     "id": 3,
     "name": "Daisy",
     "type": "kitten",
-    "hunger": 0,
-    "happiness": 100,
+    "hunger": 100,
+    "happiness": 0,
     "adopted": false,
     "ownerId": null
   },
@@ -30,17 +30,26 @@
     "id": 4,
     "name": "Cadillac",
     "type": "puppy",
-    "hunger": 50,
-    "happiness": 90,
-    "adopted": true,
-    "ownerId": 4
+    "hunger": 80,
+    "happiness": 30,
+    "adopted": false,
+    "ownerId": null
   },
   {
     "id": 5,
     "name": "Feather",
     "type": "kitten",
-    "hunger": 0,
-    "happiness": 100,
+    "hunger": 100,
+    "happiness": 0,
+    "adopted": false,
+    "ownerId": null
+  },
+  {
+    "id": 6,
+    "name": "Akın",
+    "type": "puppy",
+    "hunger": 100,
+    "happiness": 0,
     "adopted": false,
     "ownerId": null
   }

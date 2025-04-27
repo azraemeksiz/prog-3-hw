@@ -14,9 +14,7 @@ export interface User {
 	passwordHash: string;
 }
 
-export type SafeUser = Omit<User, 'passwordHash'>;
 
-//extending users so they can have other attributes
 export interface FullUser extends User {
 	budget: number;
 	inventory: {

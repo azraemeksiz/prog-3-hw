@@ -35,17 +35,17 @@
 
 <style>
     nav {
-        background: #f2f2f2;
+        background: #f09ce9;
         padding: 1rem;
         display: flex;
         gap: 1rem;
         align-items: center;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #7a2929;
     }
 
     nav a {
         text-decoration: none;
-        color: #333;
+        color: #ffffff;
     }
 
     nav .user {
@@ -57,7 +57,7 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        color: #0077cc;
+        color: #000000;
     }
 
     nav button:hover {

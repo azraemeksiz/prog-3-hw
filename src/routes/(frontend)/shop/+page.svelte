@@ -13,7 +13,7 @@
 		const res = await fetch('/api/shop', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ userId: user.id, item }) //sends /api/shop userid and item using POST method
+			body: JSON.stringify({ userId: user.id, item }) 
 		});
 
 		if (res.ok) {
@@ -50,7 +50,7 @@
 {/if}
 
 
-<!-- I will edit the style pink and cute later -->
+
 <style>
 	h1 {
 		font-size: 2rem;

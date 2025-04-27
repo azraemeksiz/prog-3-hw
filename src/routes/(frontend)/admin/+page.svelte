@@ -24,9 +24,6 @@
 });
 
 
-
-
-
 	async function addPet() {
 		const res = await fetch('/api/pets', {
 		method: 'POST',
@@ -43,6 +40,7 @@
 
 		
 	}
+
 </script>
 
 <h1>Add a New Pet</h1>
