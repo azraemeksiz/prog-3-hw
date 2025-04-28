@@ -27,11 +27,11 @@
     "id": 3,
     "name": "adminazra",
     "passwordHash": "$2b$12$/76Io5UjaszMAYEnwon1z.zRayyJPY5BMfWUzWCG9sOq.SGTugeN.",
-    "budget": 355,
+    "budget": 175,
     "inventory": {
       "food": 0,
       "toy": 0,
-      "treat": 1
+      "treat": 0
     },
     "role": "admin"
   },
@@ -55,6 +55,18 @@
     "inventory": {
       "food": 0,
       "toy": 0,
+      "treat": 0
+    },
+    "role": "user"
+  },
+  {
+    "id": 6,
+    "name": "akinbayer",
+    "passwordHash": "$2b$12$6V5AKrw7EvZzTtii6VSav.q9q6UJBKxma6nMMiKMtslU0kNKxqX1W",
+    "budget": 100,
+    "inventory": {
+      "food": 1,
+      "toy": 1,
       "treat": 0
     },
     "role": "user"

@@ -5,8 +5,8 @@
     "type": "puppy",
     "hunger": 0,
     "happiness": 100,
-    "adopted": false,
-    "ownerId": null
+    "adopted": true,
+    "ownerId": 3
   },
   {
     "id": 2,
@@ -31,7 +31,7 @@
     "name": "Cadillac",
     "type": "puppy",
     "hunger": 80,
-    "happiness": 30,
+    "happiness": 60,
     "adopted": false,
     "ownerId": null
   },
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "name": "Akın",
+    "name": "Pretty",
     "type": "puppy",
     "hunger": 100,
     "happiness": 0,

@@ -7,12 +7,12 @@ import type { FullUser, SafeFullUser } from '$lib/types';
 const usersPath = path.resolve('static/data/users.json'); //data path to users
 
 export const POST: RequestHandler = async ({ request }) => {
-	const { name, password } = await request.json(); //extracts name and password from json request
+	const { name, password } = await request.json(); 
 
 	const file = await readFile(usersPath, 'utf-8');
-	const users: FullUser[] = JSON.parse(file); //reads the users as string 
+	const users: FullUser[] = JSON.parse(file); 
 
-	const user = users.find((u) => u.name === name); //finds users
+	const user = users.find((u) => u.name === name); 
 	if (!user) {
 		return new Response(JSON.stringify({ message: 'User not found' }), {
 			status: 401
@@ -38,7 +38,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		inventory: user.inventory,
 		role: user.role
 	
-	}; //creates a safe version of the user without password
+	}; 
 
-	return new Response(JSON.stringify(safeUser), { status: 200 }); //turn into string then send
+	return new Response(JSON.stringify(safeUser), { status: 200 }); 
 };

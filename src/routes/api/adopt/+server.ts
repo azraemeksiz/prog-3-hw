@@ -4,9 +4,8 @@ import { readFile, writeFile } from 'fs/promises';
 import type { Pet } from '$lib/types';
 
 const petsPath = path.resolve('static/data/pets.json');
-const usersPath = path.resolve('static/data/users.json');
 
-//pets can be adopted only once 
+ 
 export const POST: RequestHandler = async ({ request }) => {
 	const { userId, petId } = await request.json();
 
@@ -21,7 +20,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 };
 
-pet.adopted = true; //if adopted assign pet owner id and user id
+pet.adopted = true; 
 pet.ownerId = userId;
 
 await writeFile(petsPath, JSON.stringify(pets, null, 2)); 

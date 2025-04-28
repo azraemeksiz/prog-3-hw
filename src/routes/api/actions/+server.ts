@@ -48,6 +48,16 @@ export const POST: RequestHandler = async ({ request }) => {
 			logs.push(`${user.name} played with ${pet.name}`);
 			break;
 
+			case 'treat':
+        if (user.inventory.treat > 0) {
+            user.inventory.treat -= 1;
+        } else {
+            return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
+        }
+        pet.happiness = Math.min(100, pet.happiness + 15);
+        logs.push(`${user.name} gave a treat to ${pet.name}`);
+        break;
+
 		case 'return':
 			pet.adopted = false;
 			pet.ownerId = null;

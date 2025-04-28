@@ -2,6 +2,8 @@ import type { RequestHandler } from '@sveltejs/kit';
 import fs from 'fs/promises';
 import path from 'path';
 
+//this page only reads logs but i added logs to actions page bc it was easier to push right after
+
 const logPath = path.resolve('static/data/log.json');
 
 export const GET: RequestHandler = async () => {

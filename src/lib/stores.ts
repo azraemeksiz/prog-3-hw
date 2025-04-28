@@ -1,5 +1,4 @@
 import { writable } from 'svelte/store';
-import type {SafeUser} from './types';
 import type { SafeFullUser } from './types';
 
 

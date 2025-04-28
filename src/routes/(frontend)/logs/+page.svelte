@@ -8,7 +8,7 @@
 			const res = await fetch('/api/log');
 			if (!res.ok) throw new Error('Failed to fetch logs');
 			const data = await res.json();
-			logs = data.reverse(); //to push newer logs up
+			logs = data.reverse(); //push newer to up
 
 		}
 		catch (err) { error = 'Failed to load logs.';}

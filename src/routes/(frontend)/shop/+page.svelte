@@ -32,14 +32,14 @@
 {#if user}
 <p>Budget: ${user.budget}</p> 
 
-<h3>🎒 Inventory</h3>
+<h3> Inventory</h3>
 	<ul>
 		<li>Food: {user.inventory.food}</li>
 		<li>Toy: {user.inventory.toy}</li>
 		<li>Treat: {user.inventory.treat}</li>
 	</ul>
 
-	<h3>🛍 Buy Items</h3>
+	<h3>Buy Items</h3>
 	<button on:click={() => buy('food')}>Buy Food ($5)</button>
 
 	<button on:click={() => buy('toy')}>Buy Toy ($10)</button>

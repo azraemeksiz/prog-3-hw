@@ -5,7 +5,7 @@ export interface Pet {
 	happiness: number;
 	type: string;       
 	adopted: boolean;
-	ownerId: number | null;   //added more functionalities to pets such as hunger type etc
+	ownerId: number | null;   
 }
 
 export interface User {
@@ -26,3 +26,4 @@ export interface FullUser extends User {
 }
 
 export type SafeFullUser = Omit<FullUser, 'passwordHash'>;
+

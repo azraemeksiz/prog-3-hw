@@ -9,6 +9,14 @@
 	let success = '';
   
 	$: user = $currentUser;
+
+  onMount(() => {
+	  if (!user) {
+		goto('/login');
+	  } else {
+		loadPets();
+	  }
+	});
   
 	async function loadPets() {
 	  
@@ -26,7 +34,7 @@
 
 
 
-	async function handleAction(petId: number, action: 'feed' | 'toy' | 'return') {
+	async function handleAction(petId: number, action: 'feed' | 'toy' | 'treat' | 'return') {
   if (!user) return;
 
   try {
@@ -58,10 +66,15 @@
     } else if (action === 'toy') {
       pet.happiness = Math.min(100, pet.happiness + 30);
       success = `${pet.name} played with a toy!`;
+
+    } else if (action === 'treat') {
+      pet.happiness = Math.min(100, pet.happiness + 15);
+      success = `${pet.name} got a treat!`;
+      
     } else if (action === 'return') {
       pets = pets.filter(p => p.id !== petId);
       success = `${pet.name} has been returned.`;
-    }
+    } //shows the logs right up the screen 
 
     await loadPets(); //refresh the pet list from the server so it shows values right after feeding 
 
@@ -71,17 +84,11 @@
 }
 
   
-	onMount(() => {
-	  if (!user) {
-		goto('/login');
-	  } else {
-		loadPets();
-	  }
-	});
+
   
   </script>
   
-  <h1>📋 Your Adopted Pets</h1>
+  <h1>Your Adopted Pets</h1>
   
   {#if success}<p style="color: green;">{success}</p>{/if}
   {#if error}<p style="color: red;">{error}</p>{/if}
@@ -97,6 +104,7 @@
 				  <p>Happiness: {pet.happiness}</p>
 				  <button on:click={() => handleAction(pet.id, 'feed')}>Feed</button>
 				  <button on:click={() => handleAction(pet.id, 'toy')}>Play with Toy</button>
+          <button on:click={() => handleAction(pet.id, 'treat')}>Give treat</button>
 				  <button on:click={() => handleAction(pet.id, 'return')}>Return Pet</button>
 			  </div>
 		  {/each}
@@ -104,6 +112,6 @@
   {/if}
   
   <style>
-	/* I will add some design later */
+	
   </style>
   
