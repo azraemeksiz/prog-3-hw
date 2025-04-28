@@ -5,9 +5,8 @@
 
 
 	let name = '';
-	let type = 'puppy';
-	$: user = $currentUser;
-
+	let type = '';
+	
 
 	import { get } from 'svelte/store';
 

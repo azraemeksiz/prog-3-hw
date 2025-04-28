@@ -25,13 +25,13 @@ export const POST: RequestHandler = async ({ request }) => {
 	
 	const newPet: Pet = {
 
-		id: Math.max(0, ...pets.map(p => p.id)) + 1, //adds 1 to pets ID part
+		id: Math.max(0, ...pets.map(p => p.id)) + 1, 
 		name,
 		type,
 		hunger: 100,
 		happiness: 0,
 		adopted: false,
-		ownerId: -50
+		ownerId: null
 	};
 
 	pets.push(newPet);

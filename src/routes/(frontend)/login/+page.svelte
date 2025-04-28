@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'; //navigate users to dashboard
-  import { currentUser } from '$lib/stores'; //store users in storage
-  import { invalidate } from '$app/navigation'; //keep information fresh
+  import { goto } from '$app/navigation'; 
+  import { currentUser } from '$lib/stores'; 
+  import { invalidate } from '$app/navigation'; 
 
   let name = '';
   let password = '';
