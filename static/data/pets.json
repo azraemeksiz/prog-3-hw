@@ -13,7 +13,7 @@
     "name": "BettyBop",
     "type": "kitten",
     "hunger": 100,
-    "happiness": 0,
+    "happiness": 60,
     "adopted": false,
     "ownerId": null
   },
@@ -23,7 +23,7 @@
     "type": "kitten",
     "hunger": 100,
     "happiness": 30,
-    "adopted": true,
+    "adopted": false,
     "ownerId": 4
   },
   {
@@ -40,7 +40,7 @@
     "name": "Feather",
     "type": "kitten",
     "hunger": 100,
-    "happiness": 0,
+    "happiness": 45,
     "adopted": false,
     "ownerId": null
   },
