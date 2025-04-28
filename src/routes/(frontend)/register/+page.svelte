@@ -39,14 +39,21 @@
 		Username:
 		<input type="text" bind:value={name} required />
 	</label>
+	<br />
+	<br />
 	<label>
 		Password:
 		<input type="password" bind:value={password} required />
 	</label>
+	<br />
+	<br />
 	<label>
 		Confirm Password:
 		<input type="password" bind:value={confirmPassword} required />
 	</label>
+	<br />
+	<br />
+	
 	<button type="submit">Register</button>
 </form>
 

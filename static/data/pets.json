@@ -23,8 +23,8 @@
     "type": "kitten",
     "hunger": 100,
     "happiness": 30,
-    "adopted": true,
-    "ownerId": 4
+    "adopted": false,
+    "ownerId": null
   },
   {
     "id": 4,

@@ -39,7 +39,7 @@
     "id": 4,
     "name": "aaa",
     "passwordHash": "$2b$12$9qO46LJmjOIMdpSXO0z2QO2x1IgFouGbbVKMpap/Lbb0qTyCdwueO",
-    "budget": 490,
+    "budget": 470,
     "inventory": {
       "food": 0,
       "toy": 0,
