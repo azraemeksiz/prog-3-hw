@@ -38,6 +38,11 @@ export const POST: RequestHandler = async ({ request }) => {
 	
 user.budget = user.budget - cost;
 
+if (user.budget < cost) {
+    return new Response(JSON.stringify({ message: 'Not enough budget' }), { status: 400 });
+}
+
+
 if (item === 'food') {
 	user.inventory.food = user.inventory.food + 1;
 } else if (item === 'toy') {
