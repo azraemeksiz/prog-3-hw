@@ -3,10 +3,10 @@
     "id": 1,
     "name": "Max",
     "type": "puppy",
-    "hunger": 0,
-    "happiness": 100,
-    "adopted": true,
-    "ownerId": 3
+    "hunger": 100,
+    "happiness": 0,
+    "adopted": false,
+    "ownerId": null
   },
   {
     "id": 2,
@@ -22,16 +22,16 @@
     "name": "Daisy",
     "type": "kitten",
     "hunger": 100,
-    "happiness": 0,
-    "adopted": false,
-    "ownerId": null
+    "happiness": 30,
+    "adopted": true,
+    "ownerId": 4
   },
   {
     "id": 4,
     "name": "Cadillac",
     "type": "puppy",
     "hunger": 80,
-    "happiness": 60,
+    "happiness": 75,
     "adopted": false,
     "ownerId": null
   },
@@ -52,5 +52,14 @@
     "happiness": 0,
     "adopted": false,
     "ownerId": null
+  },
+  {
+    "id": 7,
+    "name": "Lui",
+    "type": "unicorn",
+    "hunger": 100,
+    "happiness": 0,
+    "adopted": false,
+    "ownerId": -50
   }
 ]

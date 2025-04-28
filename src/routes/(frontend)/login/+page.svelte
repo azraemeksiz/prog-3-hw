@@ -9,7 +9,7 @@
 
   async function handleLogin() {
     
-    console.log("Trying login with", name, password); //added later for check
+    console.log("Trying login with", name, password); //check
 
     const res = await fetch('/api/auth/login', {
       method: 'POST',

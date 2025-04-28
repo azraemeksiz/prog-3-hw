@@ -27,11 +27,11 @@
     "id": 3,
     "name": "adminazra",
     "passwordHash": "$2b$12$/76Io5UjaszMAYEnwon1z.zRayyJPY5BMfWUzWCG9sOq.SGTugeN.",
-    "budget": 175,
+    "budget": -5,
     "inventory": {
       "food": 0,
-      "toy": 0,
-      "treat": 0
+      "toy": 2,
+      "treat": 2
     },
     "role": "admin"
   },
@@ -39,7 +39,7 @@
     "id": 4,
     "name": "aaa",
     "passwordHash": "$2b$12$9qO46LJmjOIMdpSXO0z2QO2x1IgFouGbbVKMpap/Lbb0qTyCdwueO",
-    "budget": 500,
+    "budget": 490,
     "inventory": {
       "food": 0,
       "toy": 0,

@@ -45,7 +45,7 @@ export const POST: RequestHandler = async ({ request }) => {
 				return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
 			}
 			pet.happiness = Math.min(100, pet.happiness + 30);
-			logs.push(`${user.name} played with ${pet.name}`);
+			logs.push(`${user.name} played with ${pet.name} `);
 			break;
 
 			case 'treat':
@@ -55,14 +55,14 @@ export const POST: RequestHandler = async ({ request }) => {
             return new Response(JSON.stringify({ redirect: '/shop' }), { status: 400 });
         }
         pet.happiness = Math.min(100, pet.happiness + 15);
-        logs.push(`${user.name} gave a treat to ${pet.name}`);
+        logs.push(`${user.name} gave a treat to ${pet.name} `);
         break;
 
 		case 'return':
 			pet.adopted = false;
 			pet.ownerId = null;
 			user.budget -= 20;
-			logs.push(`${user.name} returned ${pet.name} (-$20)`);
+			logs.push(`${user.name} returned ${pet.name}`);
 			break;
 
 		default:

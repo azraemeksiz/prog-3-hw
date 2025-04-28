@@ -54,11 +54,9 @@
 
 	<label>
 		Pet Type:
-		<select bind:value={type}>
-			<option value="puppy">Puppy</option>
-			<option value="kitten">Kitten</option>
-		</select>
+		<input bind:value={type} required />
 	</label>
+	
 
 	<button type="submit">Add Pet</button>
 </form>

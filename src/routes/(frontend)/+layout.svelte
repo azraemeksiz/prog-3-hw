@@ -40,12 +40,12 @@
         display: flex;
         gap: 1rem;
         align-items: center;
-        border-bottom: 1px solid #7a2929;
+        border-bottom: 1px solid #b72ca0;
     }
 
     nav a {
         text-decoration: none;
-        color: #ffffff;
+        color: #91237e;
     }
 
     nav .user {
@@ -57,7 +57,7 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        color: #000000;
+        color: #a1246b;
     }
 
     nav button:hover {
