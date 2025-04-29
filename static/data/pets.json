@@ -70,5 +70,23 @@
     "happiness": 15,
     "adopted": false,
     "ownerId": null
+  },
+  {
+    "id": 9,
+    "name": "Uzi",
+    "type": "bird",
+    "hunger": 100,
+    "happiness": 0,
+    "adopted": false,
+    "ownerId": null
+  },
+  {
+    "id": 10,
+    "name": "addy",
+    "type": "puppy",
+    "hunger": 100,
+    "happiness": 0,
+    "adopted": false,
+    "ownerId": null
   }
 ]

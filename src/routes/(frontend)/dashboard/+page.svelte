@@ -33,7 +33,6 @@
   
 
 
-
 	async function handleAction(petId: number, action: 'feed' | 'toy' | 'treat' | 'return') {
   if (!user) return;
 
